@@ -14,3 +14,7 @@ ipywidgets
 
 # HuggingFace provider
 openai
+
+# EMOTYC local inference
+torch
+transformers
