@@ -1,0 +1,455 @@
+1.1.1. Les émotions Comportementales
+
+Quand un personnage éprouve une émotion, cela se manifeste parfois par une réaction physiologique (pleurer, rougir, etc.) ou comportementale (claquer une porte, sauter, etc.). Si cette manifestation physique est décrite dans le texte, elle permet au lecteur de connaître l’état
+10
+
+émotionnel du personnage (Blanc 2010 ; Creissen et Blanc, 2017).3 Une émotion est dite Comportementale lorsqu’elle est exprimée par le biais d’une description de la manifestation physique de l’émotion chez le personnage qui la ressent.
+L’annotateur considérera comme émotion Comportementale (i.e. une Unité SitEmo ayant « Comportementale » pour valeur du trait « Mode ») tout segment textuel renvoyant à une à un manifestation physiologique (pleurer, sangloter, frissonner, sursauter, rougir, etc.), comportement (taper du poing, bloquer des routes, manifester, se mettre en grève, danser, sautiller etc.) ou à une attitude discursive (accuser, critiquer, reprocher, protester etc.) lié à un ressenti émotionnel. Les exemples (2), (3) et (4) illustrent cela.
+(2) Exemple construit comportant une émotion Désignée et une émotion Comportementale
+Luc est heureux. Il sourit. Experienceur <Luc> {Entité : Luc, Contrôle : Animé-Humain, Nature :
+NP}
+SitEmo <heureux> {Mode : Désignée, Type : Base, Catégorie : Joie, Type2 : Aucun, Catégorie2 : Aucune, Nature : SAdj, Déclencheur : heureux}
+Experienceur <Luc> {Entité : Luc, Contrôle : Animé-Humain, Nature :
+ProPerso}
+SitEmo <sourit> {Mode : Comportementale, Type : Base, Catégorie : Joie, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : sourit}
+Relation Affecte :
+<Luc> <--Attribut du sujet-- <heureux>
+<Il> <--Sujet-- <sourit>
+(3) Exemple comportant une émotion Désignée et une émotion Comportementale (issu du journal pour
+enfants Albert)
+Ainsi, plusieurs citoyens mécontents se sont réunis pour protester ensemble. Ils demandaient de l’argent pour construire de meilleures routes, des écoles et pour rénover les hôpitaux. Experienceur <plusieurs citoyens> {Entité : plusieurs citoyens,
+Contrôle : Animé-Humain, Nature : SN}
+SitEmo <mécontents> {Mode : Désignée, Type : Base, Catégorie : Colère, Type2 : Aucun, Catégorie2 : Aucune, Nature : SAdj, Déclencheur : mécontents}
+SitEmo <protester ensemble> {Mode : Comportementale, Type : Base, Catégorie : Colère, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : protester ensemble}
+Relation Affecte :
+<plusieurs citoyens> <--Épithète-- <mécontents>
+<plusieurs citoyens> <--Contexte gauche-- <protester ensemble>
+3 Les émotions Comportementales rendent compte de la « composante comportementale » des émotions, essentielle dans la
+représentation des émotions, aussi bien chez les adultes (Gygax, 2010) que chez les enfants (Creissen et Blanc, 2017).
+11
+
+(4) Exemple construit d’émotion Comportementale
+Les habitants rendent hommage à ce vétéran. Experienceur <Les habitants> {Entité : les habitants, Contrôle :
+Animé-Humain, Nature : SN}
+SitEmo <rendent hommage à ce vétéran> {Mode : Comportementale, Type : Base, Catégorie : Tristesse, Type2 : Complexe, Catégorie2 : Admiration, Nature : Proposition, Déclencheur : rendent hommage}
+Relation Affecte :
+<Les habitants> <--Sujet-- <rendent hommage à ce vétéran>
+ATTENTION. Si un même segment textuel combine une manifestation comportementale de l’émotion et un terme du lexique émotionnel (cf. exemples (5) et (6)), deux Unités SitEmo doivent être créées : une première Unité pour annoter le label émotionnel (émotion Désignée) et une seconde Unité pour englober l’ensemble du segment textuel (émotion Comportementale).
+(5) Exemple construit d’un segment combinant émotions Comportementale et Désignée
+Joseph saute de joie. Experienceur <Joseph> {Entité : Joseph, Contrôle : Animé-Humain,
+Nature : NP}
+SitEmo <saute de joie> {Mode : Comportementale, Type : Base, Catégorie : Joie, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : saute}
+SitEmo <joie> {Mode : Désignée, Type : Base, Catégorie : Joie, Type2 :
+Aucun, Catégorie2 : Aucune, Nature : SN, Déclencheur : joie}
+Relation Affecte :
+<Joseph> <--Sujet-- <saute de joie>
+<Joseph> <--Contexte gauche-- <joie>
+(6) Exemple construit d’un segment combinant émotions Comportementale et Désignée
+Nino est venu avec enthousiasme. Experienceur <Nino> {Entité : Nino, Contrôle : Animé-Humain, Nature :
+NP}
+SitEmo <est venu avec enthousiasme> {Mode : Comportementale, Type : Base, Catégorie : Joie, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : venu avec enthousiasme}
+SitEmo <enthousiasme> {Mode : Désignée, Type : Base, Catégorie : Joie, Type2 : Aucun, Catégorie2 : Aucune, Nature : SN, Déclencheur : enthousiasme}
+Relation Affecte :
+<Nino> <--Sujet-- <est venu avec enthousiasme>
+<Nino> <--Contexte gauche-- <enthousiasme>
+12
+
+1.1.2. Les émotions Désignées
+Une émotion est dite Désignée lorsqu’elle est exprimée au moyen d’un terme du lexique émotionnel, aussi appelé label émotionnel. Tous les termes (ou groupes de termes) qui désignent directement l’émotion en jeu, qui la nomment explicitement sont annotés avec une Unité SitEmo, ayant « Designee » comme valeur pour le trait « Mode » (cf. exemples (7) et (8)).
+Dans le cadre de notre schéma d’annotation, nous considérons qu’un terme appartient au lexique émotionnel si sa définition lexicographique (au sens propre ou au sens figuré, selon le sens mobilisé dans le texte) respecte au moins un des critères4 ci-dessous, dans au moins un dictionnaire parmi le CNRTL, le Wiktionnaire et le Larousse en ligne5 :
+a)
+b)
+c)
+le terme est défini à l’aide d’un des concepts suivants : «affection», «caractère», «émotion», «état affectif», «état émotionnel», «état psychologique», «force/faiblesse morale», «humeur», «sentiment», «tempérament», «trait de personnalité», «trouble affectif» » ; le terme est défini à l’aide de mots appartenant au lexique émotionnel «classique» (colère, gaîté, tristesse, dégoût, etc.) ou référant à des « états psychologiques agréables ou désagréables » (dépression, découragement, euphorie, soulagement, etc.) ; le terme est posé comme synonyme ou antonyme d'un mot remplissant au moins un des critères précédents (i.e. soit le terme est défini par un synonyme/antonyme, respectant lui-même au moins un des deux critères précédents ; soit le terme apparaît en tant que synonyme/antonyme dans la définition d’un mot respectant au moins un des deux critères précédents). Ce critère peut également être vérifié dans le dictionnaire de synonymes numérique CRISCO.
+(7) Exemple construit d’émotion Désignée (en-SP)
+Marie est en danger. Experienceur <Marie> {Entité : Marie, Contrôle : Animé-Humain,
+Nature : NP}
+SitEmo <en danger> {Mode : Désignée, Type : Base, Catégorie : Peur, Type2 : Aucun, Catégorie2 : Aucune, Nature : SPrep, Déclencheur : danger}
+Relation Affecte :
+<Marie> <--Attribut du sujet-- <en danger>
+(8) Exemple construit d’émotion Désignée (proposition)
+Pierre redoute que la porte s’ouvre. Experienceur <Pierre> {Entité : Pierre, Contrôle : Animé-Humain,
+Nature : NP}
+4 Ces critères sont adaptés de (Piolat et Bannour, 2009). 5 Ces dictionnaires ont été choisis de manière empirique, parce qu’ils proposent le plus souvent des définitions complémentaires,
+tout en étant accessibles en ligne gratuitement.
+13
+
+SitEmo <redoute que la porte s’ouvre> {Mode : Désignée, Type : Base, Catégorie : Peur, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : redoute}
+Relation Affecte :
+<Pierre> <--Sujet-- <redoute que la porte s’ouvre>
+Cas des émotions Désignées apparaissant dans des constructions modalisées
+De manière générale, l’annotateur est tenu de repérer tous les segments émotionnels de type émotion Désignée. Si le sens d’un terme du lexique émotionnel est affecté par des marques de modalité (négation, marques hypothétiques, etc.), le label émotionnel doit malgré tout être annoté par une Unité SitEmo et ce même si le ressenti émotionnel est explicitement nié ou mis en doute par exemple (cf. exemples (9) à (14)). La partie de notre schéma d’annotation dédiée à l’analyse temporelle des textes (entendue, pour rappel, au sens large, c’est à dire en faisant référence aux catégories de temps, d’aspect, de modalité et d’énonciation)permettra, lors d’une autre étape d’annotation, d’identifier les marqueurs de modalité et de rendre compte de l’interaction entre la modalité et l’expression de l’émotion (ex. émotion hypothétique ou avérée). Si l’exclusion des marques de modalité occasionne la séparation de l’Unité SitEmo en plusieurs Unités, la Relation Discontinue servira à les relier (cf. partie A section 3).
+(9) Exemple construit d’émotion Désignée modalisée par un adverbe
+Jeanne aurait peut-être eu peur. Experienceur <Jeanne> {Entité : Jeanne, Contrôle : Animé-Humain,
+Nature : NP}
+SitEmo <peur> {Mode : Désignée, Type : Base, Catégorie : Peur, Type2 :
+Aucun, Catégorie2 : Aucune, Nature : SN, Déclencheur : peur}
+Relation Affecte :
+<Jeanne> <--Contexte gauche-- <peur>
+(10) Exemple construit d’émotion Désignée modalisée par une construction hypothétique en « Si »
+Si Jeanne a peur, Pierre arrêtera le film. Experienceur <Jeanne> {Entité : Jeanne, Contrôle : Animé-Humain,
+Nature : NP}
+SitEmo <peur> {Mode : Désignée, Type : Base, Catégorie : Peur, Type2 :
+Aucun, Catégorie2 : Aucune, Nature : SN, Déclencheur : peur}
+Relation Affecte :
+<Jeanne> <--Contexte gauche-- <peur>
+(11) Exemple construit d’émotion Désignée modalisée par une négation
+Paul n’est pas heureux. Experienceur <Paul> {Entité : Paul, Contrôle : Animé-Humain, Nature :
+NP}
+SitEmo <heureux> {Mode : Désignée, Type : Base, Catégorie : Joie, Type2 : Aucun, Catégorie2 : Aucune, Nature : SAdj, Déclencheur : heureux}
+14
+
+Relation Affecte :
+<Paul> <--Attribut du sujet-- <heureux>
+(12) Exemple comportant des émotions Désignées modalisées par un verbe (extrait d’un texte de fiction
+de Susie Morgenstern, La Famille Trop d’Filles - Elisa
+Ils espèrent tous être étonnés, éblouis, épatés. Experienceur <Ils> {Entité :les spectateurs, Contrôle : Animé-Humain,
+Nature : ProPerso}
+SitEmo <étonnés> {Mode : Désignée, Type : Base, Catégorie : Surprise, Type2 : Aucun, Catégorie2 : Aucune, Nature : SAdj, Déclencheur : étonnés}
+SitEmo <éblouis> {Mode : Désignée, Type : Complexe, Catégorie : Admiration, Type2 : Aucun, Catégorie2 : Aucune, Nature : SAdj, Déclencheur : éblouis}
+SitEmo <épatés> {Mode : Désignée, Type : Base, Catégorie : Surprise, Type2 : Complexe, Catégorie2 : Admiration, Nature : SAdj, Déclencheur : épatés}
+Relation Affecte :
+<Ils> <--Contexte gauche-- <étonnés>
+<Ils> <--Contexte gauche-- <éblouis>
+<Ils> <--Contexte gauche-- <épatés>
+(13) Exemple d’une émotion Désignée modalisée par une négation (extrait d’un texte de fiction de Susie
+Morgenstern, La Famille Trop d’Filles - Les grands-parents se marient)
+Tu n’as pas peur que grand-mère trouve ça trop simple, comme mariage ? Experienceur <Tu> {Entité : Grand-Père Mimi, Contrôle : Animé-Humain, Nature : ProPerso}
+SitEmo <peur> {Mode : Désignée, Type : Base, Catégorie : Peur, Type2 :
+Aucun, Catégorie2 : Aucune, Nature : SN, Déclencheur : peur}
+Relation Affecte :
+<Tu> <--Contexte gauche-- <peur>
+(14) Exemple d’une émotion Désignée modalisée par une négation (extrait d’un article du journal pour
+enfants P’tit Libé)
+Mais les loups mangent parfois des brebis et les agriculteurs qui les élèvent ne sont pas contents. Experienceur <les agriculteurs qui les élèvent> {Entité : les agriculteurs qui les élèvent, Contrôle : Animé-Humain, Nature : SN}
+SitEmo <contents> {Mode : Désignée, Type : Base, Catégorie : Joie, Type2 : Aucun, Catégorie2 : Aucune, Nature : SAdj, Déclencheur : contents}
+Relation Affecte :
+<les agriculteurs qui les élèvent> <--Attribut du sujet-- <contents>
+15
+
+1.1.3. Les émotions Montrées
+Une émotion est dite Montrée lorsqu’elle transparaît au travers des caractéristiques des énoncés eux-mêmes (cf. exemples (15) et (16)). Si, au moment de l’énonciation, l’énonciateur6 (personnage de l’histoire, Narrateur ou Scripteur) éprouve une émotion, alors l’énoncé produit peut comporter des marques linguistiques de l’état émotionnel de l’énonciateur. Ce sont ainsi les caractéristiques lexicales, syntaxiques, etc., de l’énoncé qui montrent que le locuteur ressentait une émotion et sur lesquelles l’interlocuteur (ou lecteur) s’appuie pour inférer l’état émotionnel de l’énonciateur. Les segments textuels qui montrent l’émotion sont très hétérogènes. Ils peuvent prendre la forme de structures syntaxiques (énoncés exclamatifs, averbaux, clivés, pseudo-clivés, dislocation gauche ou droite, accumulation etc.), de marques lexicales (interjections, termes ayant une connotation particulière, termes exprimant un jugement etc.) ou de signes typographiques (points de suspension, points d’exclamation, etc.). (Micheli, 2014)
+Nous signalons que l’association de marques montrant l’émotion à une catégorie émotionnelle précise (ex. Joie, Peur, etc.) ne s’effectue qu’au moyen d’un « faisceau de caractéristiques » qui convergent vers une même émotion (Micheli, 2014). Autrement dit, pour interpréter précisément une émotion Montrée, il est nécessaire d’utiliser d’autres indices émotionnels (émotions Désignées, Comportementales ou Suggérées) (cf. Annexe 6, partie D, section 2 pour une analyse détaillée d’exemples de points d’exclamation montrant la surprise). Puisqu’ils sont toujours sous- spécifiés, les marqueurs qui montrent les émotions semblent constituer une sorte de sous- ensemble de marqueurs de prise en charge énonciative. Nous tenons néanmoins à conserver dans notre schéma la catégorie des émotions Montrées et ce pour deux raisons :
+seule la catégorie des émotions Montrées permet de capter les marqueurs syntaxiques, typographiques, morphologiques etc. exprimant des émotions, soient des marqueurs non lexicaux des émotions ;
+les émotions Montrées interviennent peut-être dans le processus de la structuration des
+texte, au même titre que les émotions Comportementales, Désignées et Suggérées.
+Par ailleurs, nous remarquons que les émotions Montrées semblent se trouver typiquement dans des discours rapportés (discours direct pour les textes journalistiques ; discours direct et discours indirect libre pour les textes de fiction). Cependant, l’énonciateur principal (Narrateur ou Scripteur) montre aussi parfois sa propre émotion : les marqueurs de l’émotion Montrée apparaissent alors dans le corps du texte.
+(15) Exemple comportant des émotions Montrée, Désignée et Comportementale (issu d’un article du
+journal pour enfants P’tit Libé)
+« Il faut être assez désespéré, si vous avez besoin de faire de la Lune une planète juste pour pouvoir dire que Pluton en est une », a rétorqué l’astronome Mike Brown, celui qui a retiré Pluton de la liste des planètes.
+6 Dans (Mciheli, 2014 ; p. 63) il est précisé que lorsque l’émotion est montrée, « l’allocutaire est conduit à inférer » l’émotion du « locuteur » ou « en cas de disjonction énonciative, l’énonciateur ». Nous retenons donc ici le terme d’énonciateur, qui couvre un plus large éventail de situations énonciatives.
+16
+
+SitEmo <Il faut être assez désespéré> {Mode : Montrée, Type : Base, Catégorie : Colère, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : il faut être assez}
+SitEmo <assez désespéré> {Mode : Désignée, Type : Base, Catégorie : Tristesse, Type2 : Aucun, Catégorie2 : Aucune, Nature : SAdj, Déclencheur : désespéré}
+Experienceur <vous> {Entité : vous, Contrôle : Animé-Humain, Nature :
+ProPerso}
+SitEmo <juste> {Mode : Montrée, Type : Base, Catégorie : Colère, Type2 : Aucun, Catégorie2 : Aucune, Nature : Adv, Déclencheur : juste}
+SitEmo <a rétorqué> {Mode : Comportementale, Type : Base, Catégorie : Colère, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : rétorqué}
+Experienceur <l’astronome Mike Brown, celui qui a retiré Pluton de la liste des planètes> {Entité : l’astronome Mike Brown, celui qui a retiré Pluton de la liste des planètes, Contrôle : Animé- Humain, Nature : SN}
+Relation Affecte :
+--Discours direct--> <Il faut être assez désespéré> <l’astronome Mike Brown, celui qui a retiré Pluton de la liste des planètes>
+<assez désespéré> --Contexte droit--> <vous>
+<juste> --Discours direct--> <l’astronome Mike Brown, celui qui a retiré Pluton de la liste des planètes>
+<a rétorqué> --Sujet--> <l’astronome Mike Brown, celui qui a retiré Pluton de la liste des planètes>
+(16) Exemple comportant une émotion Suggérée, séparée en trois unités reliées par la relation Discontinue et une émotion Montrée du Scripteur (issu d’un article du journal pour enfants Albert)
+ils ont ainsi empoché… un million de dollars ! fin Experienceur <ils> {Entité : X, Contrôle : Animé-Humain, Nature :
+ProPerso}
+SitEmo <ont>+<empoché>+<un million de dollars> {Mode : Suggérée, Type : Base, Catégorie : Joie, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : empoché;un million de dollars}
+SitEmo <…> {Mode : Montrée, Type : Base, Catégorie : Joie, Type2 : Base, Catégorie2 : Surprise, Nature : Points de suspension, Déclencheur : …}
+Experienceur <> {Entité : Scripteur, Contrôle : Animé-Humain, Nature :
+N/A}
+SitEmo <!> {Mode : Montrée, Type : Base, Catégorie : Joie, Type2 : Base, Catégorie2 : Surprise, Nature : Point d’exclamation, Déclencheur : !}
+Experienceur <> {Entité : Scripteur, Contrôle : Animé-Humain, Nature :
+N/A}
+Relation Discontinue :
+<ont> ----> <empoché>
+<ont> ----> <un million de dollars>
+17
+
+Relation Affecte :
+<ils> --Sujet--> <ont>
+<…> --N/A--> <>
+<!> --N/A--> <>
+1.1.4. Les émotions Suggérées
+Une émotion Suggérée est déduite par le lecteur de la description d’une situation associée par des conventions socio-culturelles à un ressenti émotionnel (cf. exemples (17) à (19)). L’émotion n’est donc ni désignée directement, ni traduite par un comportement, ni visible par la structure de l’énoncé. Elle repose sur une situation qui sert de support au lecteur pour produire une inférence émotionnelle : l’émotion ressentie par le personnage (ou Narrateur / Scripteur) est inférée, déduite par le lecteur à partir de la situation décrite. L’inférence n’est possible que si la situation décrite est rattachée de manière prototypique, conventionnelle à un ressenti émotionnel.
+Tous les syntagmes (ex. la victoire, le décès etc.) ou propositions (ex. perdre un proche, remporter le match etc.) renvoyant à des situations prototypiquement associées à des émotions sont à annoter avec une Unité SitEmo ayant « Suggeree » pour valeur du trait « Mode ». Il nous semble que, le plus souvent, certains termes de ces syntagmes ou propositions auront une polarité négative ou positive, issue de l’association conventionnelle à un ressenti émotionnel7.
+Lors du repérage des émotions Suggérées, il est nécessaire de focaliser son attention sur les situations réellement prototypiques, associables à un ressenti émotionnel en dehors du texte. Les situations dont l’interprétation émotionnelle ne peut être effectuée que dans le contexte du texte ne doivent donc pas être prises en compte. Nous précisons cependant que même les situations les plus prototypiques ne semblent jamais liées à une catégorie émotionnelle spécifique (ex. Joie, Peur etc.). Ainsi, le fait de « remporter un match » est, en dehors de tout contexte, socialement rattaché à un ressenti émotionnel positif qui correspondra, selon le texte, à de la Joie, de la Fierté ou de l’Admiration (voire un mélange de ces émotions). En revanche, une proposition comme « prendre le chemin ombragé » ne bénéficie pas d’une association conventionnel à un ressenti émotionnel et ne devra donc pas être annoté comme une émotion Suggérée, même dans un énoncé comme « Paul est très heureux de prendre le chemin ombragé. ».
+Pour annoter une émotion Suggérée, l’Unité SitEmo englobe l’ensemble du syntagme ou de la proposition qui décrit la situation support d’inférence émotionnelle8. Il faut tout de même veiller à délimiter le plus précisément possible le segment textuel, tout en respectant les frontières de syntagmes.
+(17) Exemple d’émotion Suggérée, contenue dans un discours rapporté introduit par « que » (issu d’un
+article du journal pour enfants Albert)
+Il affirme que les élections ont été truquées.
+7 Généralement, ces termes constitueront également les éléments à renseigner pour le trait « Declencheur » de l’Unité. 8 Les éventuels adverbes, adjectifs etc. marquant une intensité et contenus dans la description de la situation émotionnelle sont
+donc inclus dans l’unité émotionnelle annotée.
+18
+
+Experienceur <Il> {Entité : X, Contrôle : Animé-Humain, Nature :
+ProPerso}
+SitEmo <les élections ont été truquées> {Mode : Suggérée, Type : Base, Catégorie : Colère, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : truquées}
+Relation Affecte :
+<Il> <--Discours indirect-- <les élections ont été truquées>
+(18) Exemple comportant des émotions Comportementale et Suggérée de la Doxa (issu d’un article du
+journal pour enfants Albert)
+Certains sont accusés d’être malhonnêtes et d’avoir volé de l’argent dans les caisses de l’État. SitEmo <sont accusés d’être malhonnêtes> {Mode : Comportementale, Type : Base, Catégorie : Colère, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : sont accusés}
+Experienceur <> {Entité : Doxa, Contrôle : Animé-Humain, Nature : N/A}
+SitEmo <être malhonnêtes> {Mode : Suggérée, Type : Base, Catégorie : Colère, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : malhonnêtes}
+Experienceur <> {Entité : Doxa, Contrôle : Animé-Humain, Nature : N/A}
+SitEmo <avoir volé de l’argent dans les caisses de l’État> {Mode : Suggérée, Type : Base, Catégorie : Colère, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : volé}
+Experienceur <> {Entité : Doxa, Contrôle : Animé-Humain, Nature : N/A}
+Relation Affecte :
+<sont accusés d’être malhonnêtes> --N/A--> <>
+<être malhonnêtes> --N/A--> <>
+<avoir volé de l’argent dans les caisses de l’État> --N/A--> <.>
+(19) Exemple comportant des émotions Suggérée et Désignée coordonnées (issu d’un article du journal
+pour enfants P’tit Libé)
+Elles sont victimes d’injustices et d’humiliations. Experienceur <Elles> {Entité : des femmes, Contrôle : Animé-Humain,
+Nature : ProPerso}
+SitEmo <victimes d'injustices> {Mode : Suggérée, Type : Base, Catégorie : Colère, Type2 : Aucun, Catégorie2 : Aucune, Nature : SAdj, Déclencheur : victimes;injustices}
+SitEmo <victimes>+<d’humiliations> {Mode : Désignée, Type : Complexe, Catégorie : Embarras, Type2 : Aucun, Catégorie2 : Aucune, Nature : SAdj, Déclencheur : humiliations}
+Relation Discontinue :
+<victimes> ----> <d’humiliations>
+Relation Affecte :
+<Elles> <--Attribut du sujet-- <victimes d’injustices>
+<Elles> <--Attribut du sujet-- <victimes>
+19
+
+1.2. Trait « Type », « Type2 », « Categorie » et « Categorie2 »
+En plus du mode d’expression, une Unité SitEmo est caractérisée par le type d’émotion (émotion de base ou émotion complexe) et la catégorie émotionnelle (peur, joie, etc.) associés au segment annoté. Ces deux paramètres descriptifs ont été retenus car ils sont particulièrement pertinents pour notre cadre d’étude qu’est la compréhension de textes par les enfants pour le projet TextToKids. De fait, ils figurent comme paramètres dans les études développementales de la compréhension chez les enfants : le type d’émotion influence la compréhension de textes (Davidson, 2006 ; Blanc et Quenette, 2017) et la catégorie émotionnelle a quant à elle un impact sur la compréhension de l’émotion elle-même (Simoës-Perlant et al., 2018). De manière plus générale, c’est-à-dire hors du champ strict de la compréhension chez les enfants, ces paramètres permettent une analyse linguistique fine du champ sémantique des émotions.
+Le trait « Type » d’une Unité SitEmo sert à renseigner le type de l’émotion principale véhiculée par le segment textuel annoté et le trait « Categorie » à renseigner sa catégorie émotionnelle. La valeur du trait « Type » est donc déterminée par celle du trait « Categorie ». Parfois, une même unité émotionnelle verbalise deux émotions différentes : le trait « Type2 » indique le type de la seconde émotion exprimée et le trait « Categorie2 » sa catégorie émotionnelle. La valeur par défaut du trait « Type2 » est « Aucun » et celle du trait « Categorie2 » est « Aucune » (cas où une seule émotion est communiquée). Les correspondances suivantes entre type d’émotion et catégories émotionnelles sont opérées :
+émotions de base : Colère, Dégoût, Joie, Peur, Surprise, Tristesse ;
+émotions complexes : Admiration, Culpabilité, Embarras, Fierté, Jalousie.
+Nous précisons que chacune des 11 catégories émotionnelles prévues par notre schéma d’annotation est à entendre comme une catégorie générale, soit un ensemble, dans lequel sont regroupées plusieurs émotions plus spécifiques. Une catégorie émotionnelle comportera ainsi plusieurs émotions, se distinguant notamment par leur niveau d’intensité. Notre catégorie émotionnelle Colère doit ainsi être mobilisée pour annoter les segments textuels exprimant de la colère, de l’énervement, du mécontentement, de la fureur, de l’indignation, de la désapprobation, etc. La liste des émotions que nous intégrons dans nos catégories émotionnelles est disponible en Annexe 5 du présent document.
+Les segments textuels émotionnels exprimant une catégorie émotionnelle non prévue par
+notre schéma d’annotation sont à annoter avec l’Unité Autre (cf. partie B section 2).
+1.3. Trait « Nature »
+Afin de faciliter les analyses linguistiques effectuées en post-traitement, chaque Unité SitEmo
+comporte un trait « Nature » servant à renseigner la nature du segment textuel annoté.
+20
+
+Pour simplifier la démarche d’annotation, les syntagmes verbaux et les propositions sont tous
+considérés comme de nature « Proposition ».
+1.4. Trait « Déclencheur »
+Le trait « Declencheur » a été introduit pour simplifier l’utilisation du corpus annoté à des fins d’analyses linguistiques et/ou d’expériences de TAL. Nous considérons comme étant le déclencheur d’une Unité SitEmo le segment le plus court possible (terme ou groupe de termes) qui, au sein de la portion annotée, constitue l’élément émotionnel le plus saillant, celui qui semble concentrer le sens émotionnel de la portion textuelle et paraît ainsi en motiver l’annotation (cf. exemple (20)).
+Les déclencheurs sont renseignés manuellement par l’annotateur. Ils doivent être rentrés sous leur forme fléchie, telle qu’elle apparaît dans le texte. Afin de limiter les fautes de frappe qui brouilleraient les analyses, il est possible de faire des copier-coller directement dans Glozz (cf. partie A section 2).
+Lorsque cela paraît pertinent, il ne faut pas hésiter à indiquer plusieurs déclencheurs pour une même Unité SitEmo (cf. exemple (21)). Les différents termes ou groupes de termes considérés comme des déclencheurs doivent être séparés par des points-virgules (« ; ») lors de la saisie.
+(20) Exemple comportant une émotion Désignée et une émotion Suggérée, avec du discours rapporté
+introduit par « que » (issu d’un article du journal pour enfants Albert)
+En effet, les autorités craignaient que la glace, déjà fissurée, ne se rompe et provoque un tsunami (un raz-de-marée) sur le village et en particulier sur la centrale électrique et les réservoirs de carburant. Experienceur <les autorités> {Entité : les autorités, Contrôle :
+Animé-Humain, Nature : SN}
+SitEmo <craignaient que la glace, déjà fissurée, ne se rompe et provoque un tsunami (un raz-de-marée) sur le village et en particulier sur la centrale électrique et les réservoirs de carburant> {Mode : Désignée, Type : Base, Catégorie : Peur, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : craignaient}
+SitEmo <la glace, déjà fissurée, ne se rompe et provoque un tsunami (un raz-de-marée) sur le village et en particulier sur la centrale électrique et les réservoirs de carburant> {Mode : Suggérée, Type : Base, Catégorie : Peur, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : se rompe;tsunami}
+Relation Affecte :
+<les autorités> <--Sujet-- <craignaient que la glace, déjà fissurée, ne se rompe et provoque un tsunami (un raz-de-marée) sur le village et en particulier sur la centrale électrique et les réservoirs de carburant>
+<les autorités> <--Discours indirect-- <la glace, déjà fissurée, ne se rompe et provoque un tsunami (un raz-de-marée) sur le village et en particulier sur la centrale électrique et les réservoirs de carburant>
+21
+
+(21) Exemple d’émotion Suggérée, réalisée par un long segment avec plusieurs déclencheurs (issu d’un
+article du journal pour enfants Albert)
+L’Angola a accepté d’être payé en têtes de bétail plutôt qu’en argent, car dans ce pays, la sécheresse frappe régulièrement, tuant les animaux et laissant les éleveurs sans ressources. Experienceur <ce pays> {Entité : L’Angola, Contrôle : Animé-NonHumain,
+Nature : SN}
+SitEmo <la sécheresse frappe régulièrement, tuant les animaux et laissant les éleveurs sans ressources> {Mode : Suggérée, Type : Base, Catégorie : Peur, Type2 : Base, Catégorie2 : Tristesse, Nature : Proposition, Déclencheur : sécheresse;tuant;sans ressources}
+Relation Affecte :
+<ce pays> <--Contexte gauche-- <la sécheresse frappe régulièrement, tuant les animaux et laissant les éleveurs sans ressources>
+1.5. Règles de délimitation des Unités SitEmo
+De manière générale, l’Unité SitEmo englobe le premier syntagme le plus signifiant pour l’expression de l’émotion. La délimitation des frontières des segments émotionnel n’est cependant pas toujours évidente. Certains cas particulier sont détaillés dans cette section. Des exemples plus nombreux sont fournis en Annexe 6.
+1.5.1. Quelques cas généraux
+Si le segment textuel est un verbe pronominal, le pronom réfléchi est inclus dans le segment
+annoté par l’Unité SitEmo (cf. exemple (22)).
+(22) Exemple comportant des émotions Comportementales réalisées par un verbe pronominal (issu d’un
+article du journal pour enfants P’tit Libé)
+on s’énerve et on se dispute sans cesse Experienceur <on> {Entité : Les victimes du mal-logement, Contrôle :
+Animé-Humain, Nature : ProPerso}
+SitEmo <s’énerve> {Mode : Comportementale, Type : Base, Catégorie : Colère, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : s’énerve}
+Experienceur <on> {Entité : Les victimes du mal-logement, Contrôle :
+Animé-Humain, Nature : ProPerso}
+SitEmo <se dispute> {Mode : Comportementale, Type : Base, Catégorie : Colère, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : se dispute}
+Relation Affecte :
+<on> <--Sujet-- <s’énerve>
+<on> <--Sujet-- <se dispute>
+22
+
+Quand plusieurs segments émotionnels sont coordonnés, on délimite une nouvelle Unité SitEmo à chaque fois, en mobilisant la Relation Discontinue quand cela est nécessaire (cf. exemples (23) et (24)).
+(23) Exemple comportant des émotions Désignées coordonnées (extrait d’un texte de fiction de Susie
+Morgenstern, La Famille Trop d’Filles - Elisa)
+Ils espèrent tous être étonnés, éblouis, épatés. Experienceur <Ils> {Entité :les spectateurs, Contrôle : Animé-Humain,
+Nature : ProPerso}
+SitEmo <étonnés> {Mode : Désignée, Type : Base, Catégorie : Surprise, Type2 : Aucun, Catégorie2 : Aucune, Nature : SAdj, Déclencheur : étonnés}
+SitEmo <éblouis> {Mode : Désignée, Type : Complexe, Catégorie : Admiration, Type2 : Aucun, Catégorie2 : Aucune, Nature : SAdj, Déclencheur : éblouis}
+SitEmo <épatés> {Mode : Désignée, Type : Base, Catégorie : Surprise, Type2 : Complexe, Catégorie2 : Admiration, Nature : SAdj, Déclencheur : épatés}
+Relation Affecte :
+<Ils> <--Contexte gauche-- <étonnés>
+<Ils> <--Contexte gauche-- <éblouis>
+<Ils> <--Contexte gauche-- <épatés>
+(24) Exemple comportant une émotion Suggérée et une émotion Désignée coordonnées (issu d’un article
+du journal pour enfants P’tit Libé)
+Elles sont victimes d’injustices et d’humiliations. Experienceur <Elles> {Entité : des femmes, Contrôle : Animé-Humain,
+Nature : ProPerso}
+SitEmo <victimes d'injustices> {Mode : Suggérée, Type : Base, Catégorie : Colère, Type2 : Aucun, Catégorie2 : Aucune, Nature : SAdj, Déclencheur : victimes;injustices}
+SitEmo <victimes>+<d’humiliations> {Mode : Désignée, Type : Complexe, Catégorie : Embarras, Type2 : Aucun, Catégorie2 : Aucune, Nature : SAdj, Déclencheur : humiliations}
+Relation Discontinue :
+<victimes> ----> <d’humiliations>
+Relation Affecte :
+<Elles> <--Attribut du sujet-- <victimes d’injustices>
+<Elles> <--Attribut du sujet-- <victimes>
+1.5.2. Cas particuliers impliquant des émotions Comportementales
+Lorsqu’une émotion Comportementale est réalisée par un syntagme verbal ou proposition, l’ensemble du syntagme verbal (soit le verbe, ses arguments et certains modifieurs) est à annoter avec l’Unité SitEmo. Si la proposition est associée à des modifieurs de type complément circonstanciel, comme les adverbiaux temporels, alors ces modifieurs doivent être exclus du
+23
+
+segment annoté par l’Unité SitEmo (cf. exemples (25) et (26)). La Relation Discontinue peut alors être nécessaire pour « recoller » les différentes parties de l’Unité SitEmo (cf. exemples (27) et (28)).
+(25) Exemple comportant plusieurs émotions Comportementales (issu d’un article du journal pour enfants
+P’tit Libé)
+«Ils n’osent plus inviter des amis chez eux car ils ont honte. Du coup ils n’osent pas aller chez les autres non plus et se recroquevillent sur eux-mêmes», affirme Manuel Domergue. Experienceur <Ils> {Entité : Les victimes du mal-logement, Contrôle :
+Animé-Humain, Nature : ProPerso}
+SitEmo <n’osent plus inviter des amis chez eux> {Mode : Comportementale, Type : Complexe, Catégorie : Embarras, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : n’osent plus}
+Experienceur <ils> {Entité : Les victimes du mal-logement, Contrôle :
+Animé-Humain, Nature : ProPerso}
+SitEmo <honte> {Mode : Désignée, Type : Complexe, Catégorie : Embarras, Type2 : Aucun, Catégorie2 : Aucune, Nature : SN, Déclencheur : honte}
+Experienceur <ils> {Entité : Les victimes du mal-logement, Contrôle :
+Animé-Humain, Nature : ProPerso}
+SitEmo <n’osent pas aller chez les autres non plus> {Mode : Comportementale, Type : Complexe, Catégorie : Embarras, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : n’osent pas}
+SitEmo <se recroquevillent sur eux-mêmes> {Mode : Comportementale, Type : Complexe, Catégorie : Embarras, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : se recroquevillent}
+Relation Affecte :
+<Ils> <--Sujet-- <n’osent plus inviter des amis chez eux>
+<ils> <--Contexte gauche-- <honte>
+<ils> <--Sujet-- <n’osent pas aller chez les autres non plus>
+<ils> <--Sujet-- <se recroquevillent sur eux-mêmes>
+(26) Exemple comportant des émotions Comportementale et Suggérée (issu d’un article du journal pour
+enfants Albert)
+En menant ces actions, les cheminots protestent contre la volonté d’Emmanuel Macron de vouloir supprimer leur statut spécial : le président français voudrait en effet que les nouvelles personnes embauchées à la SNCF soient considérées comme des salariés de n’importe quelle entreprise et ne bénéficient donc plus des avantages liés au statut de cheminot. Experienceur <les cheminots> {Entité : les cheminots, Contrôle :
+Animé-Humain, Nature : SN}
+SitEmo <protestent contre la volonté d’Emmanuel Macron de vouloir supprimer leur statut spécial> {Mode : Comportementale, Type : Base, Catégorie : Colère, Type2 : Aucune, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : protestent}
+SitEmo <contre la volonté d’Emmanuel Macron de vouloir supprimer leur statut spécial> {Mode : Suggérée, Type : Base, Catégorie :
+24
+
+Colère, Type2 : Aucune, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : contre;supprimer}
+Relation Affecte :
+<les cheminots> <--Sujet-- <protestent contre la volonté d’Emmanuel Macron de vouloir supprimer leur statut spécial>
+<les cheminots> <--Contexte gauche-- <contre la volonté d’Emmanuel Macron de vouloir supprimer leur statut spécial>
+(27) Exemple d’émotion Comportementale discontinue (issu d’un article du journal pour enfants Albert)
+De nombreux agriculteurs de lait ont bloqué au mois d’août le siège de la société Lactalis, à Laval en Mayenne. Experienceur <De nombreux agriculteurs de lait> {Entité : De nombreux
+agriculteurs de lait, Contrôle : Animé-Humain, Nature : SN}
+SitEmo <ont bloqué>+<le siège de la société Lactalis> {Mode : Comportementale, Type : Base, Catégorie : Colère, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : bloqué}
+Relation Discontinue :
+<ont bloqué> ----> <le siège de la société Lactalis>
+Relation Affecte :
+<De nombreux agriculteurs de lait> <--Sujet-- <ont bloqué>
+(28) Exemple d’émotion Comportementale discontinue (issu d’un article du journal pour enfants Albert)
+Les cheminots protestent aussi contre une réforme plus générale que le gouvernement veut mettre en place : actuellement, la SNCF est la seule entreprise autorisée à faire rouler des trains sur le réseau français. Experienceur <Les cheminots> {Entité : Les cheminots, Contrôle :
+Animé-Humain, Nature : SN}
+SitEmo <protestent>+<contre une réforme plus générale que le gouvernement veut mettre en place> {Mode : Comportementale, Type : Base, Catégorie : Colère, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : protestent}
+Relation Discontinue :
+<protestent> ----> <contre une réforme plus générale que le gouvernement veut mettre en place>
+Relation Affecte :
+<Les cheminots> <--Sujet-- <protestent>
+Attention, lorsque l’émotion Comportementale correspond à une proposition subordonnée conjonctive ou à une proposition infinitive introduite par une préposition, la conjonction de subordination (ex. que) et la préposition (ex. pour, de) ne doivent pas être captées par l’Unité SitEmo (cf. exemple (29)).
+25
+
+(29) Exemple comportant des émotions Comportementales réalisées par des propositions infinitives (issu
+d’un article du journal pour enfants Albert)
+Ils ont donc décidé à la fin du mois d’août de protester en bloquant le siège de l’entreprise, situé à Laval, pour réclamer une hausse des prix. Experienceur <Ils> {Entité : De nombreux agriculteurs de lait,
+Contrôle : Animé-Humain, Nature : ProPerso}
+SitEmo <protester> {Mode : Comportementale, Type : Base, Catégorie : Colère, Type2 : Aucune, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : protester}
+SitEmo <en bloquant le siège de l’entreprise, situé à Laval> {Mode : Comportementale, Type : Base, Catégorie : Colère, Type2 : Aucune, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : bloquant}
+SitEmo <réclamer une hausse des prix> {Mode : Comportementale, Type : Base, Catégorie : Colère, Type2 : Aucune, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : réclamer}
+Relation Affecte :
+<Ils> <--Contexte gauche-- <protester>
+<Ils> <--Contexte gauche-- <en bloquant le siège de l’entreprise, situé à Laval>
+<Ils> <--Contexte gauche-- <réclamer une hausse des prix>
+1.5.3. Cas particuliers impliquant des émotions Désignées
+Lorsqu’un terme du lexique émotionnel (émotion de type Désignée) se trouve dans un syntagme prépositionnel (SP) introduit par « en », l’ensemble du SP (préposition incluse) est annoté avec l’Unité SitEmo (cf. exemples (30) à (32)).
+(30) Exemple construit d’émotion Désignée réalisée par un en-SP
+Marie est en danger. Experienceur <Marie> {Entité : Marie, Contrôle : Animé-Humain,
+Nature : NP}
+SitEmo <en danger> {Mode : Désignée, Type : Base, Catégorie : Peur, Type2 : Aucun, Catégorie2 : Aucune, Nature : SPrep, Déclencheur : danger}
+Relation Affecte :
+<Marie> <--Attribut du sujet-- <en danger>
+(31) Exemple construit d’émotion Désignée réalisée par un en-SP
+Marie est en colère. Experienceur <Marie> {Entité : Marie, Contrôle : Animé-Humain,
+Nature : NP}
+SitEmo <en colère> {Mode : Désignée, Type : Base, Catégorie : Colère, Type2 : Aucun, Catégorie2 : Aucune, Nature : SPrep, Déclencheur : colère}
+Relation Affecte :
+<Marie> <--Attribut du sujet-- <en colère>
+
+
+(32) Exemple d’émotion Désignée réalisée par un en-SP (issu d’un article du journal pour enfants Albert)
+les manifestants sont toujours en colère contre leurs dirigeants Experienceur <les manifestants> {Entité : les manifestants, Contrôle :
+Animé-Humain, Nature : SN}
+SitEmo <en colère contre leurs dirigeants> {Mode : Désignée, Type : Base, Catégorie : Colère, Type2 : Aucun, Catégorie2 : Aucune, Nature : SPrep, Déclencheur : colère}
+Relation Affecte :
+<les manifestants> <--Attribut du sujet-- <en colère contre leurs dirigeants>
+Quand un label émotionnel est présent dans une locution verbale comme « avoir peur/honte », « faire peur/honte » etc. seul le terme du lexique émotionnel est annoté avec l’Unité SitEmo. La Relation Affecte a donc comme nature, respectivement « contexte gauche » et « contexte droit » (cf. exemple (33)).
+(33) Exemple comportant une émotion Désignée et une émotion Suggérée (issu d’un article du journal
+pour enfants P’tit Libé)
+Quand il y a des grandes fissures dans les murs d’une maison, ses habitants ont peur en permanence [...]. SitEmo <Quand il y a des grandes fissures dans les murs d’une maison> {Mode : Suggérée, Type : Base, Catégorie : Peur, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : grandes fissures}
+Experienceur <ses habitants> {Entité : Les victimes du mal-logement,
+Contrôle : Animé-Humain, Nature : SN}
+SitEmo <peur> {Mode : Désignée, Type : Base, Catégorie : Peur, Type2 :
+Aucun, Catégorie2 : Aucune, Nature : SN, Déclencheur : peur}
+Relation Affecte :
+<Quand il y a des grandes fissures dans les murs d’une maison> --Contexte droit--> <ses habitants>
+<ses habitants> <--Contexte gauche-- <peur>
+1.5.4. Cas particuliers impliquant des émotions Suggérées
+Comme pour les émotions Comportementales, toute la proposition exprimant l’émotion Suggérée est annotée avec l’Unité SitEmo. Cependant, puisque l’expérienceur bénéficie d’une Unité séparée, cela oblige parfois à scinder l’Unité émotionnelle en plusieurs parties à relier ensuite avec la Relation Discontinue (cf. exemple (34)).
+(34) Exemple comportant une émotion Suggérée discontinue et une émotion Montrée (issu d’un article du
+journal pour enfants Albert)
+Pour ses 50 ans, le zoo a offert à l’animal un gâteau géant, composé de ses fruits et légumes préférés : pastèque, kiwi et potiron ! fin Experienceur <l’animal> {Entité : la tortue, Contrôle : Animé-
+NonHumain, Nature : SN}
+
+SitEmo <a offert>+<un gâteau géant, composé de ses fruits et légumes préférés : pastèque, kiwi et potiron> {Mode : Suggérée, Type : Base, Catégorie : Joie, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : offert;préférés}
+SitEmo <!> {Mode : Montrée, Type : Base, Catégorie : Joie, Type2 : Base, Catégorie2 : Surprise, Nature : Point d’exclamation, Déclencheur : !}
+Experienceur <> {Entité : Scripteur, Contrôle : Animé-Humain, Nature :
+N/A}
+Relation Discontinue :
+<a offert> ----> <un gâteau géant, composé de ses fruits et légumes préférés : pastèque, kiwi et potiron>
+Relation Affecte :
+<a offert> --Complément indirect--> <l’animal>
+<!> --N/A--> <>
+1.5.5. Cas particuliers impliquant plusieurs modes d’expression des émotions
+Dans des cas de discours rapporté indirect (très fréquents dans des textes journalistiques), le verbe introducteur de discours correspond parfois à un comportement émotionnel (attitude discursive) ou à un terme du lexique émotionnel, tandis que le discours rapporté suggère cette émotion. Il convient alors de délimiter deux Unités SitEmo : une première Unité pour capter le segment textuel exprimant l’émotion Comportementale ; une seconde Unité englobant le segment de discours rapporté qui réalise l’émotion Suggérée (cf. exemples (35) à (38)).
+(35) Exemple comportant une émotion Comportementale et une émotion Suggérée avec discours
+rapporté (issu d’un article du journal pour enfants Albert)
+De leur côté, les éleveurs reprochaient au ministre de ne pas être suffisamment impliqué à leurs côtés. Experienceur <les éleveurs> {Entité : les éleveurs, Contrôle : Animé-
+Humain, Nature : SN}
+SitEmo <reprochaient au ministre de ne pas être suffisamment impliqué à leurs côtés> {Mode : Comportementale, Type : Base, Catégorie : Colère, Nature : Proposition, Déclencheur : reprochaient}
+SitEmo <ne pas être suffisamment impliqué à leurs côtés> {Mode : Suggérée, Type : Base, Catégorie : Colère, Nature : Proposition, Déclencheur : ne pas être suffisamment impliqué}
+Relation Affecte :
+<les éleveurs> <--Sujet-- <reprochaient au ministre de ne pas être suffisamment impliqué à leurs côtés>
+<les éleveurs> <--Discours indirect-- <ne pas être suffisamment impliqué à leurs côtés>
+
+(36) Exemple comportant une émotion Désignée et une émotion Suggérée avec discours rapporté (issu
+d’un article du journal pour enfants Albert)
+De même, certains parents et enseignants craignent que les enfants qui possèdent un téléphone portable le sortent pendant les cours pour chercher des Pokémon dans les salles ou dans les couloirs de l’école. Experienceur <certains parents et enseignants> {Entité : certains
+parents et enseignants, Contrôle : Animé-Humain, Nature : SN}
+SitEmo <craignent que les enfants qui possèdent un téléphone portable le sortent pendant les cours pour chercher des Pokémon dans les salles ou dans les couloirs de l’école> {Mode : Désignée, Type : Base, Catégorie : Peur, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : craignent}
+SitEmo <les enfants qui possèdent un téléphone portable le sortent pendant les cours pour chercher des Pokémon dans les salles ou dans les couloirs de l’école> {Mode : Suggérée, Type : Base, Catégorie : Peur, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : les enfants qui possèdent un téléphone portable le sortent pendant les cours}
+Relation Affecte :
+<certains parents et enseignants> <--Sujet-- <craignent que les enfants qui possèdent un téléphone portable le sortent pendant les cours pour chercher des Pokémon dans les salles ou dans les couloirs de l’école>
+<certains parents et enseignants> <--Discours indirect-- <les enfants qui possèdent un téléphone portable le sortent pendant les cours pour chercher des Pokémon dans les salles ou dans les couloirs de l’école>
+(37) Exemple comportant une émotion Désignée et une émotion Suggérée avec discours rapporté (issu
+d’un article du journal pour enfants Albert)
+Mais Cuba redoute que l’arrivée de Donald Trump à la tête des États-Unis ne mette un frein au rapprochement engagé ces dernières années. Experienceur <Cuba> {Entité : Cuba, Contrôle : Animé-Humain, Nature :
+NP}
+SitEmo <redoute que l’arrivée de Donald Trump à la tête des États-Unis ne mette un frein au rapprochement engagé ces dernières années> {Mode : Désignée, Type : Base, Catégorie : Peur, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : redoute}
+SitEmo <l’arrivée de Donald Trump à la tête des États-Unis ne mette un frein au rapprochement engagé ces dernières années> {Mode : Suggérée, Type : Base, Catégorie : Peur, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : mette un frein}
+Relation Affecte :
+<Cuba> <--Sujet-- <redoute que l’arrivée de Donald Trump à la tête des États-Unis ne mette un frein au rapprochement engagé ces dernières années>
+<Cuba> <--Discours indirect-- <l’arrivée de Donald Trump à la tête des États-Unis ne mette un frein au rapprochement engagé ces dernières années>
+
+(38) Exemple comportant une émotion Désignée et une émotion Suggérée avec discours rapporté (issu
+d’un article du journal pour enfants Albert)
+En effet, les autorités craignaient que la glace, déjà fissurée, ne se rompe et provoque un tsunami (un raz-de-marée) sur le village et en particulier sur la centrale électrique et les réservoirs de carburant. Experienceur <les autorités> {Entité : les autorités, Contrôle :
+Animé-Humain, Nature : SN}
+SitEmo <craignaient que la glace, déjà fissurée, ne se rompe et provoque un tsunami (un raz-de-marée) sur le village et en particulier sur la centrale électrique et les réservoirs de carburant> {Mode : Désignée, Type : Base, Catégorie : Peur, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : craignaient}
+SitEmo <la glace, déjà fissurée, ne se rompe et provoque un tsunami (un raz-de-marée) sur le village et en particulier sur la centrale électrique et les réservoirs de carburant> {Mode : Suggérée, Type : Base, Catégorie : Peur, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : se rompe;tsunami}
+Relation Affecte :
+<les autorités> <--Sujet-- <craignaient que la glace, déjà fissurée, ne se rompe et provoque un tsunami (un raz-de-marée) sur le village et en particulier sur la centrale électrique et les réservoirs de carburant>
+<les autorités> <--Discours indirect-- <la glace, déjà fissurée, ne se rompe et provoque un tsunami (un raz-de-marée) sur le village et en particulier sur la centrale électrique et les réservoirs de carburant>
+Attention, à chaque fois que le verbe introducteur d’un discours rapporté est une émotion Comportementale ou Désignée, le discours rapporté n’est pas nécessairement une émotion Suggérée. L’interprétation émotionnelle de la situation exprimée dans les propos rapportés est parfois trop contextuelle pour que le discours rapporté suggère une émotion (cf. exemple (39)).
+(39) Exemple construit d’émotion Désignée avec discours rapporté, sans émotion Suggérée
+Pierre redoute que la porte s’ouvre. Experienceur <Pierre> {Entité : Pierre, Contrôle : Animé-Humain,
+Nature : NP}
+SitEmo <redoute que la porte s’ouvre> {Mode : Désignée, Type : Base, Catégorie : Peur, Type2 : Aucun, Catégorie2 : Aucune, Nature : Proposition, Déclencheur : redoute}
+Relation Affecte :
+<Pierre> <--Sujet-- <redoute que la porte s’ouvre>
+Quand une émotion Désignée est réalisée par un verbe (ex. redouter), tout le syntagme verbal est annoté avec l’Unité SitEmo. Si le verbe est inclus dans une proposition relative, cela implique parfois de délimiter des Unités discontinues. Par ailleurs, lorsque le déclencheur d’une émotion
+30
